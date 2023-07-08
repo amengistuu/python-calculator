@@ -26,7 +26,6 @@ def main():
 
 Type "exit" to stop this program.
 """))
-
         if operation.lower() == "addition":
             # validation for first number
             while True:
@@ -63,7 +62,6 @@ Type "exit" to stop this program.
             else:
                 formatted_result = result
             print(formatted_result)
-        
         elif operation.lower() == "subtraction":
             # validation for first number
             while True:
@@ -163,15 +161,18 @@ Type "exit" to stop this program.
                 except Exception as e:
                     print(f"An error occured: {str(e)}")
             
-            # calculate the result
-            result = num1 / num2
-
-            # dispay the result as int if it ends in .0
-            if result.is_integer():
-                formatted_result = int(result)
-            else:
-                formatted_result = result
-            print(formatted_result)
+            # put the calculation of the result in a try-except block to handle error from division by zero
+            try:
+                # calculate the result
+                result = num1 / num2
+                # dispay the result as int if it ends in .0
+                if result.is_integer():
+                    formatted_result = int(result)
+                else:
+                    formatted_result = result
+                print(formatted_result)
+            except ZeroDivisionError as e:
+                print(f"You cannot divide by zero.")
         elif operation.lower() == "exit":
             set_exit_program()
         else:
