@@ -40,6 +40,7 @@ Type "exit" to stop this program.
                     print("You must type in a number.")
                 except Exception as e:
                     print(f"An error occured: {str(e)}")
+            
             # validation for second number
             while True:
                 num2 = input("Second number: ")
@@ -52,21 +53,127 @@ Type "exit" to stop this program.
                     print("You must type in a number.")
                 except Exception as e:
                     print(f"An error occured: {str(e)}")
+            
+            # calculate the result
             result = num1 + num2
+            
             # dispay the result as int if it ends in .0
             if result.is_integer():
                 formatted_result = int(result)
             else:
                 formatted_result = result
             print(formatted_result)
-        elif operation.lower() == "subraction":
-            pass
+        
+        elif operation.lower() == "subtraction":
+            # validation for first number
+            while True:
+                num1 = input("First number: ")
+                if num1.lower() == "exit":
+                    set_exit_program()
+                try:
+                    num1 = float(num1)
+                    break
+                except ValueError:
+                    print("You must type in a number.")
+                except Exception as e:
+                    print(f"An error occured: {str(e)}")
+            
+            # validation for second number
+            while True:
+                num2 = input("Second number: ")
+                if num2.lower() == "exit":
+                    set_exit_program()
+                try:
+                    num2 = float(num2)
+                    break
+                except ValueError:
+                    print("You must type in a number.")
+                except Exception as e:
+                    print(f"An error occured: {str(e)}")
+            
+            # calculate the result
+            result = num1 - num2
+
+            # dispay the result as int if it ends in .0
+            if result.is_integer():
+                formatted_result = int(result)
+            else:
+                formatted_result = result
+            print(formatted_result)
         elif operation.lower() == "multiplication":
-            pass
+            # validation for first number
+            while True:
+                num1 = input("First number: ")
+                if num1.lower() == "exit":
+                    set_exit_program()
+                try:
+                    num1 = float(num1)
+                    break
+                except ValueError:
+                    print("You must type in a number.")
+                except Exception as e:
+                    print(f"An error occured: {str(e)}")
+            
+            # validation for second number
+            while True:
+                num2 = input("Second number: ")
+                if num2.lower() == "exit":
+                    set_exit_program()
+                try:
+                    num2 = float(num2)
+                    break
+                except ValueError:
+                    print("You must type in a number.")
+                except Exception as e:
+                    print(f"An error occured: {str(e)}")
+            
+            # calculate the result
+            result = num1 * num2
+
+            # dispay the result as int if it ends in .0
+            if result.is_integer():
+                formatted_result = int(result)
+            else:
+                formatted_result = result
+            print(formatted_result)
         elif operation.lower() == "division":
-            pass
+            # validation for first number
+            while True:
+                num1 = input("First number: ")
+                if num1.lower() == "exit":
+                    set_exit_program()
+                try:
+                    num1 = float(num1)
+                    break
+                except ValueError:
+                    print("You must type in a number.")
+                except Exception as e:
+                    print(f"An error occured: {str(e)}")
+            
+            # validation for second number
+            while True:
+                num2 = input("Second number: ")
+                if num2.lower() == "exit":
+                    set_exit_program()
+                try:
+                    num2 = float(num2)
+                    break
+                except ValueError:
+                    print("You must type in a number.")
+                except Exception as e:
+                    print(f"An error occured: {str(e)}")
+            
+            # calculate the result
+            result = num1 / num2
+
+            # dispay the result as int if it ends in .0
+            if result.is_integer():
+                formatted_result = int(result)
+            else:
+                formatted_result = result
+            print(formatted_result)
         elif operation.lower() == "exit":
-            break
+            set_exit_program()
         else:
             print("Invalid input. Please select a valid operation.")
 
